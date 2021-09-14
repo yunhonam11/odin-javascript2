@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title> Tic Tac Toe </title>
+    <link rel="icon" href="./images/tictactoe-icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body> 
+    <header> 
+        <button class="back-first" onclick="back('first')"> 
+            <i class="material-icons" style="font-size: 50px;">backspace</i> 
+        </button> 
+        <button class="back-second"> <i class="material-icons" style="font-size: 50px;">backspace</i> </button> 
+        <h1 class="main-title"> TIC TAC TOE </h1>
+    </header>
+
+    <main>
+        <input class="p1-name" type="text" value="Player 1 Name" /> <br>
+        <input class="p2-name" type="text" value="Player 2 Name" /> 
+        <button class="pvp-name-pick" onclick="pickName('pvp')"> START </button>
+        <button class="ai-name-pick" onclick="pickName('ai')"> START </button>
+
+        <button class="pvp-pick" onclick='pickMode("pvp")'> PvP </button>
+        <button class="ai-pick" onclick='pickMode("ai")'> AI </button>
+
+        <label class="p1-title"> Player 1 </label> 
+        <label class="p2-title"> Player 2 </label>
+        <label class="ai-title"> AI </label> <br>
+        <br>
+        <div class="pick-marker">
+            <label class="p1-O-text"> O </label> <input class="p1-O" name="p1" type="radio" checked> 
+            <label class="p1-X-text"> X </label> <input class="p1-X" name="p1" type="radio" >
+            <label class="p2-O-text"> O </label> <input class="p2-O" name="p2" type="radio"> 
+            <label class="p2-X-text"> X </label> <input class="p2-X" name="p2" type="radio" checked>
+        </div>
+        <label class="p1-score"> Score: <p class="p1-point"> </p> </label>
+        <label class="p2-score"> Score: <p class="p2-point"> </p> </label> 
+
+        <button class="start-game" id="start-pvp"> START GAME </button>
+        <button class="start-game" id="start-ai"> START GAME </button>
+
+        <div class="game-board">
+            <div class="b-11"></div> <div class="b-12"></div> <div class="b-13"></div> <br>
+            <div class="b-21"></div> <div class="b-22"></div> <div class="b-23"></div> <br>
+            <div class="b-31"></div> <div class="b-32"></div> <div class="b-33"></div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/main-script.js"> </script>
+</body>
+
+</html>
